@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-#nav
+#menu
 {
     width: 300px;
     margin: 200px auto;
@@ -20,15 +20,41 @@
     color: #fff;
     background-color: green;
 }
-div
+/*div
 {
     padding: 0;
     margin: 10px 0;
-}
+}*/
 .haschildren a
 {
     background-color: #888;
     display: none;
     float: left;
     width: 300px;
+}
+div,span,p
+{
+    width: 140px;
+    height: 140px;
+    margin: 5px;
+    background: #aaa;
+    border: #000 1px solid;
+    float: left;
+    font-size: 17px;
+    font-family:Verdana;
+}
+div.mini
+{
+    height: 55px;
+    width: 55px;
+    background: #aaa;
+    font-size: 12px;
+    float: left;
+}
+div.hide
+{
+    display: none;
+}
+#change
+{
 }

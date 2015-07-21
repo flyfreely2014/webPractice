@@ -31,12 +31,29 @@
                     alert("感谢您的支持");
                 };
             });
+            $("#change").click(function(){
+                //使用jQuery的#id选择器选取元素并操作
+                //$("#one").css("background","#bbffaa");
+                //使用jQuery的.class选择器选取元素并操作
+                //$(".mini").css("background","#bbffaa");
+                //使用多种选择器选取元素
+                //$('span, #two').css("background","#bbffaa");
+                //选择body里所有的div
+                //$('body div').css("background","#bbffaa");
+                //选择body里所有的子div
+                //$('body > div').css("background","#bbffaa");
+                //选择class为one的下一个div
+                //$('.one + div').css("background","#bbffaa");
+                //选择id为two的元素的后面所有div兄弟元素
+                $('#two ~ div').css("background", "#bbffaa");
+            });
         });
     </script>
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
     <!--这是一个jQuery导航栏 -->
+    <!--
     <div id="menu">
         <div class="haschildren">
             <span>第一章-认识jQuery</span>
@@ -67,19 +84,41 @@
             <a>3.4-小结</a>
         </div>
     </div>
+    -->
     <!--分别使用DOM方法和jQuery方法实现选中提示 -->
+    <!--
     <div id="check">
         <input type="checkbox" id="cr" name="cr" value=""><label for="cr">我已阅读并同意上述协议。</label>
     </div>
+    -->
     <!--jQuery选择器练习-->
-    <div id="test_selector">
-        <div id="one" class="one">
-            id为one，class为one的div
-            <div class="mini">class为mini</div>
-        </div>
-        <div class="one" id="two" title="test">
-            id为two，class为one，
-        </div>
+    <div id="one" class="one">
+        id为one，class为one的div
+        <div class="mini">class为mini</div>
     </div>
+    <div class="one" id="two" title="test">
+        id为two，class为one，title为test的div
+        <div class="mini" title="other">class为mini，title为other</div>
+        <div class="mini" title="test">class为mini,title为test</div>
+    </div>
+    <div class="one">
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini"></div>
+    </div>
+    <div class="one">
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini" title="test">class为mini,title为test</div>
+    </div>
+    <div style="display: none;" class="none">style的display为none的div</div>
+    <div class="hide">class为hide的div</div>
+    <div>
+        包含input的type为hidden的div<input type="hidden" size="8" />
+    </div>
+    <span id="mover">正在执行动画的span元素</span>
+    <input type="button" id="change" value="应用jQuery改变元素属性" />
 </body>
 </html>

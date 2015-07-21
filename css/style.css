@@ -1,0 +1,34 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+#nav
+{
+    width: 300px;
+    margin: 200px auto;
+}
+.haschildren
+{
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+    width: 300px;
+}
+.high_light
+{
+    color: #fff;
+    background-color: green;
+}
+div
+{
+    padding: 0;
+    margin: 10px 0;
+}
+.haschildren a
+{
+    background-color: #888;
+    display: none;
+    float: left;
+    width: 300px;
+}

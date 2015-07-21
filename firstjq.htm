@@ -45,7 +45,17 @@
                 //选择class为one的下一个div
                 //$('.one + div').css("background","#bbffaa");
                 //选择id为two的元素的后面所有div兄弟元素
-                $('#two ~ div').css("background", "#bbffaa");
+                //$('#two ~ div').css("background", "#bbffaa");
+                //选取第一个div元素
+                //$("div:first").css("background","red");
+                //选取class不为.one的div元素
+                //$('div:not(.one)').css("background","red");
+                //选取索引值为偶数的div元素
+                //$('div:even').css("background","red");
+                //选取索引值为特定值的div元素
+                //$('div:eq(8)').css("background","green");
+                //选取索引值小于某值的div元素
+                $('div:lt(5)').css("background","red");
             });
         });
     </script>

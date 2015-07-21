@@ -6,13 +6,20 @@
 	<title>第一个jQuery页面</title>
     <script src="./js/jquery-1.11.3.min.js"></script>
     <script>
-        jQuery(document).ready(function() {
-            jQuery(".haschildren").click(function() {
-                jQuery(this).addClass("high_light")
+        $(document).ready(function() {
+            $(".haschildren").click(function() {
+                $(this).addClass("high_light")
                     .children("a").show().end()
                 .siblings().removeClass("high_light")
                     .children("a").hide();
-            })
+            });
+            var $cr = $("#cr");
+            var cr = $cr[0];
+            $cr.click(function(){
+                if (cr.checked) {
+                    alert("感谢您的支持，您可以继续操作！");
+                };
+            });
         });
     </script>
     <link rel="stylesheet" href="./css/style.css" />
@@ -47,6 +54,9 @@
             <a>3.3-案例研究——某网站超链接和图片提示效果</a>
             <a>3.4-小结</a>
         </div>
+    </div>
+    <div id="check">
+        <input type="checkbox" id="cr" name="cr" value=""><label for="cr">我已阅读并同意上述协议。</label>
     </div>
 </body>
 </html>

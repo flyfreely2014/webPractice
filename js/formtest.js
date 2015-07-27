@@ -1,5 +1,5 @@
 $(function() {
-    $(":input").focus(function() {
+    $("#username,#passwd,#msg").focus(function() {
         $(this).addClass("focus");
     }).blur(function() {
         $(this).removeClass("focus");
@@ -37,4 +37,11 @@ $(function() {
             $comment.animate({scrollTop:"+=50"},600)
         }
     });
+    $("#all").click(function() {
+        if (this.checked) {
+            $('[name=items]:checkbox').attr("checked", true);
+        }else{
+            $('[name=items]:checkbox').attr("checked", false);
+        }
+    })
 });

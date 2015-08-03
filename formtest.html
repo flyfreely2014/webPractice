@@ -5,17 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>formText</title>
 <link href="css/formtest.css" rel="stylesheet" />
-<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="js/formtest.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/formtest.js" charset="utf-8"></script>
 </head>
 <body>
 <form action="#" method="psot" id="regform">
 <fieldset id="first">
     <legend>个人信息</legend>
-    <label for="username">用户名：</label><input type="text" id="username" /><br />
-    <label for="passwd">密码：</label><input type="text" id="passwd" /><br />
-    <label for="msg">详细信息：</label><textarea id="msg"></textarea><br />
-    <input type="submit" name="submit" value="提交" /><input type="reset" name="reset" value="重置" />
+    <div class="int">
+        <label for="username">用户名：</label><input type="text" id="username" class="required" /><span class="star">*</span>
+    </div>
+    <div class="int">
+        <label for="email">密码：</label><input type="text" id="email" class="required" /><span class="star">*</span>
+    </div>
+    <div class="int">
+        <label for="msg">详细信息：</label><textarea id="msg"></textarea>
+    </div>
+    <input type="submit" id="submit" name="submit" value="提交" /><input type="reset" name="reset" value="重置" />
 </fieldset>
 </form>
 <form action="#" method="post">
@@ -31,15 +37,16 @@
 </fieldset>
 </form>
 <form action="#" method="post" id="chktest">
-    <fieldset>
-        <legend>复选框</legend>
-        <input type="checkbox" id="all" value="" />全选/全不选<br />
-        <input type="checkbox" name="items" value="GTA5" />GTA5
-        <input type="checkbox" name="items" value="孤岛惊魂4">孤岛惊魂4
-        <input type="checkbox" name="items" value="战地2">战地2
-        <input type="checkbox" name="items" value="坦克世界">坦克世界
-        <input type="button" name="submit" id="submit" value="提交" />
-    </fieldset>
+<fieldset>
+    <legend>复选框</legend>
+    <input type="checkbox" name="items" value="GTA5" />GTA5
+    <input type="checkbox" name="items" value="孤岛惊魂4" />孤岛惊魂4
+    <input type="checkbox" name="items" value="战地2" />战地2
+    <input type="checkbox" name="items" value="坦克世界" />坦克世界
+    <input type="button" id="selectAll" value="全选" />
+    <input type="button" id="selectRev" value="反选" />
+    <input type="button" name="submit" id="submitCheck" value="提交" />
+</fieldset>
 </form>
 </body>
 </html>
